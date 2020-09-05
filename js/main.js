@@ -1,3 +1,66 @@
+<!-- Task 1 : Calculator -->
+	var calcpercentage = false;
+	  var calcpercentagevalue = 0;
+	  // Insertion (Numbers, Addition, subtraction, Mutliplication, Division)
+         function insert(num){		 
+		 if(num=="%"){
+		 calcpercentage = true;
+		 calcpercentagevalue = document.form.view.value;		 
+		 }
+         	document.form.view.value = document.form.view.value + num;
+         }
+		 // Equal to
+         function equal(){
+		 if(calcpercentage){
+		var res= document.form.view.value.split("%");
+		var exp = res[0];
+         	var exp1 = res[1];
+         	result = (exp1/100)*exp;
+         	document.form.view.value = result;
+		cleanPercentageValues();
+         	return true;
+		 }
+         	var exp = document.form.view.value;
+         	if(exp){
+         		result = eval(exp);
+         		document.form.view.value = result;
+         		return true;
+         	}
+         }
+		 // Clean
+         function clean(){
+         	exp = "";
+         	document.form.view.value = "";
+			cleanPercentageValues();
+         	return true;
+         }
+		 // Percentage
+		 function cleanPercentageValues(){
+		  calcpercentage = false;
+	      calcpercentagevalue = 0;
+		  return true;
+		 }
+		 // Back option
+         function back(){
+         	var exp = document.form.view.value;
+         	exp = exp.substring(0,exp.length-1);
+         	document.form.view.value = exp;
+         	return true;
+         }
+		 // Square root
+         function sqrt(){
+         	var exp = document.form.view.value;
+         	exp = Math.round(Math.sqrt(exp)*1000)/1000;
+         	document.form.view.value = exp;
+         	return true;
+         }
+		 // Absolute value
+         	function absolute(){
+         	var exp = document.form.view.value;
+         	exp = Math.abs(exp);
+         	document.form.view.value = exp;
+         	return true;
+         }
 
 <!-- Task 2 : Form Validation Function -->
 function checkvalid_form()
