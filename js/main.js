@@ -26,6 +26,6 @@ function checkvalid_form()
 		return false;
 	}
 	
-	alert('Successful!!');
+	alert('Registration Successful!!');
 	return true
 	}
