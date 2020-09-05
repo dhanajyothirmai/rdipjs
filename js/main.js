@@ -17,7 +17,7 @@ function checkvalid_form()
 	}
 
 	if(!email.value.match(email_validators)){
-		alert('Invalid Email-id Has to have a ‘’@’ and “.” in the email url');
+		alert('Invalid Email-id! Has to have a @ and . in the email url');
 		return false;
 	}
 
