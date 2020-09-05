@@ -1,5 +1,5 @@
 
-<!-- Form Validation Function -->
+<!-- Task 2 : Form Validation Function -->
 function checkvalid_form()
 {
 	var form = document.getElementById('form').value;
@@ -30,7 +30,7 @@ function checkvalid_form()
 	return true
 	}
 
-<!-- Palindrome & Anagram Checker -->
+<!-- Task 3: Palindrome & Anagram Checker -->
 	
 	function palindrome(text){
 	var inputString = text.toLowerCase();
@@ -54,8 +54,38 @@ function checkvalid_form()
 	else{
 		alert('No! Not Anagram');
 	}
-        }   
-<! -- Currency Converter -->
+        } 
+<!-- Task 4: Who will Survive? -->
+	function calculate() {
+	    console.log(CaluculateResult());
+        alert(CaluculateResult());
+    }
+
+    function CaluculateResult() {
+        var input1 = parseInt(document.getElementById("input1").value);
+        var input2 = parseInt(document.getElementById("input2").value);
+        input1 = input1 < 2 ? input1 : (input1 % 3);
+        input2 = input2 < 2 ? input2 : (input2 % 3);
+        //Rule 1
+        if (input1 == input2) {
+            return "Tie";
+        }
+        //Rule 2
+        else if ((input1 == 0 && input2 == 1) || (input2 == 0 && input1 == 1)) {
+            return "Human Wins...!!! :)";
+        }
+        //Rule 3
+        else if ((input1 == 1 && input2 == 2) || (input2 == 1 && input1 == 2)) {
+            return "Cocroach Wins...!!!!" ;
+        }
+        //Rule 4
+        else if ((input1 == 0 && input2 == 2) || (input2 == 0 && input1 == 2)) {
+            return "Nuclear bomb Wins...!!!";
+        }
+
+        return "No match found";
+    }
+<! -- Task 5:  Currency Converter -->
 	function currencyConverter(){		
 		var amount = document.getElementById("input1").value;
 		var fromcurrency = document.getElementById("from_currency");
