@@ -29,3 +29,29 @@ function checkvalid_form()
 	alert('Registration Successful!!');
 	return true
 	}
+
+<!-- Palindrome & Anagram Checker -->
+	
+	function palindrome(text){
+	var inputString = text.toLowerCase();
+        var reversedString = inputString.split("").reverse().join("");
+        if (reversedString === inputString){
+    	alert('Yes! Palindrome');
+       }
+      else{
+    	alert('No! Not Palindrome');
+       }
+       } 
+
+
+       function anagram(text1, text2){
+	var string1 = text1.toLowerCase().split('').sort().join();
+	var string2 = text2.toLowerCase().split('').sort().join(); 
+
+	if(string1 == string2){
+		alert('Yes! Anagram');
+	}
+	else{
+		alert('No! Not Anagram');
+	}
+        }   
