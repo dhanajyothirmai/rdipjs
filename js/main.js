@@ -1,6 +1,6 @@
 
 <!-- Form Validation Function -->
-function Form_Validation()
+function Form_Valid()
 {
 	var form = document.getElementById('form').value;
 	var Name = document.getElementById('name');
