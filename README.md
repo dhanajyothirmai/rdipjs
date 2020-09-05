@@ -1,13 +1,15 @@
-##Task 1: Calculator
+### Week 2 Assignment
 
 
-##Task 2: Registration Form Validation
+-Task 1: Calculator
+
+-Task 2: Registration Form Validation
 
 
-##Task 3: Palindrome & Anagram Check
+-Task 3: Palindrome & Anagram Check
 
 
-##Task 4: Who will Survive?
+-Task 4: Who will Survive?
 
 
-##Task 5: Currency Calculator
+-Task 5: Currency Calculator
