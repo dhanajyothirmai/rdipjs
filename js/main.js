@@ -55,3 +55,30 @@ function checkvalid_form()
 		alert('No! Not Anagram');
 	}
         }   
+<! -- Currency Converter -->
+	function currencyConverter(){		
+		var amount = document.getElementById("input1").value;
+		var fromcurrency = document.getElementById("from_currency");
+		fromcurrency = fromcurrency.options[fromcurrency.selectedIndex].value;
+		var tocurrency = document.getElementById("to_currency");
+		tocurrency = tocurrency.options[tocurrency.selectedIndex].value;
+		var query = fromcurrency + "_" + tocurrency;
+		
+		var url = "https://free.currconv.com/api/v7/convert?q=" + query + "&compact=ultra&apiKey=ecd96f38ab9cbbe978b7";
+		
+		// This is to make api call for currency converter.
+		var request = new XMLHttpRequest()
+
+request.open('GET', url, true)
+request.onload = function () {
+  var data = JSON.parse(this.response);
+  if (request.status >= 200 && request.status < 400) {
+	  document.getElementById("displayvalue").innerHTML  = parseInt(amount) * data[query];
+  } else {
+    alert('error')
+  }
+}
+
+request.send();
+		
+}
